@@ -111,5 +111,11 @@
 	"Select a language": "Seleccionar un idioma",
 	"The language to use for public facing pages. Leave blank for default (English)": "El idioma a utilizar en las páginas de cara al público. Déjelo en blanco por defecto(Inglés)",
 	"Controls whether the authors email address is displayed in the meta. Requires \"Show article meta data\" to be true": "Controla si el correo electrónico del autor es mostrado en los metadatos. Requiere que \"Mostrar lor metadatos del artículo\" sea verdadero",
-	"Import": "Importar"
+	"Import": "Importar",
+	"Was this article helpful?" : "¿Te resultó útil este artículo?",
+	"Votes": "Votos",
+	"Preview" : "Previsualizar",
+	"Status": "Estado",
+	"Article title *" : "Título del artículo *",
+	"Article body (Markdown) *":"Cuerpo del artículo (Markdown)"
 }
