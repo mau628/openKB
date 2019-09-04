@@ -15,6 +15,9 @@ Demo: [http://openkb.markmoffat.com](http://openkb.markmoffat.com)
 
 If my work helps you, please consider [![buying me a coffee](https://cdn-images-1.medium.com/max/738/1*G95uyokAH4JC5Ppvx4LmoQ@2x.png)](https://www.buymeacoffee.com/mrvautin)
 
+## Fork
+Este es un fork del proyecto original con la intención de agregar traducciones y configuraciones personalizadas.
+
 ### Installation
 
 1. Clone Repository: `git clone https://github.com/mrvautin/openKB.git && cd openKB`
@@ -47,44 +50,6 @@ platform.
 - **Mermaid**: openKB allows for [Mermaid](http://knsv.github.io/mermaid/) charts in articles.
 - **Editor**: openKB uses Markdown-it which is based off the [CommonMark spec](http://spec.commonmark.org/). This allows for the very best Markdown experience.
 - **Image management**: openKB allows for drag and drop of images into articles. The image is automatically uploaded to the server in the background. Google Chrome users can also paste images directly from the clipboard.
-
-### Screenshots
-
-**Homepage**
-
-![Homepage](https://raw.githubusercontent.com/mrvautin/mrvautin.github.io/master/images/openkb/openkb_homepage_.png)
-
-**Responsive**
-
-![Responsive](https://raw.githubusercontent.com/mrvautin/mrvautin.github.io/master/images/openkb/openkb_desktop_mobile.png)
-
-**Fully Configurable**
-
-![Fully Configurable](https://raw.githubusercontent.com/mrvautin/mrvautin.github.io/master/images/openkb/openkb_settings.png)
-
-**Admin editor**
-
-![Editor](https://raw.githubusercontent.com/mrvautin/mrvautin.github.io/master/images/openkb/openkb_editor.png)
-
-**Article view**
-
-![Article view](https://raw.githubusercontent.com/mrvautin/mrvautin.github.io/master/images/openkb/openkb_articleview.png)
-
-**Admin article management**
-
-![Article filtering](https://raw.githubusercontent.com/mrvautin/mrvautin.github.io/master/images/openkb/openkb_articlefiltering.png)
-
-**Managing files**
-
-![Files](https://raw.githubusercontent.com/mrvautin/mrvautin.github.io/master/images/openkb/openkb_files.png)
-
-**This is a deliberate rip from [https://twitter.com](https://twitter.com) to show an example. All design and credit goes to [https://twitter.com](https://twitter.com) and not openKB.**
-
-![Theme](https://raw.githubusercontent.com/mrvautin/mrvautin.github.io/master/images/openkb/openkb_theme_example.png)
-
-**Live search/typeahead**
-
-![typeahead](https://raw.githubusercontent.com/mrvautin/mrvautin.github.io/master/images/openkb/openkb_typeahead.png)
 
 ### Admin
 

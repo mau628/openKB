@@ -192,7 +192,7 @@ router.get('/' + config.settings.route_name + '/:id', common.restrict, function 
                 if(result.kb_password !== ''){
                     if(req.session.pw_validated === 'false' || req.session.pw_validated === undefined || req.session.pw_validated == null){
                         res.render('protected_kb', {
-                            title: 'Protected Article',
+                            title: 'Arículo Protegido',
                             result: result,
                             config: config,
                             session: req.session,
@@ -275,7 +275,7 @@ router.get('/settings', common.restrict, function (req, res){
 
     fs.readdir(themePath, function (err, files){
         res.render('settings', {
-            title: 'Settings',
+            title: 'Configuración',
             session: req.session,
             themes: files.filter(junk.not),
             locale: Object.keys(req.i18n.locales),
@@ -385,7 +385,7 @@ router.get('/edit/:id', common.restrict, function (req, res){
 
         common.dbQuery(db.kb, {kb_parent_id: req.params.id}, {kb_last_updated: -1}, 20, function (err, versions){
             res.render('edit', {
-                title: 'Edit article',
+                title: 'Editar artículo',
                 result: result,
                 versions: versions,
                 session: req.session,
@@ -494,7 +494,7 @@ router.get('/suggest', common.suggest_allowed, function (req, res){
     common.setTemplateDir('admin', req);
 
     res.render('suggest', {
-        title: 'Suggest article',
+        title: 'Sugerir artículo',
         config: config,
         editor: true,
         is_admin: req.session.is_admin,
@@ -719,7 +719,7 @@ router.get('/users', common.restrict, function (req, res){
     var db = req.app.db;
     common.dbQuery(db.users, {}, null, null, function (err, users){
         res.render('users', {
-            title: 'Users',
+            title: 'Usuarios',
             users: users,
             config: config,
             is_admin: req.session.is_admin,
@@ -745,7 +745,7 @@ router.get('/user/edit/:id', common.restrict, function (req, res){
         }
 
         res.render('user_edit', {
-            title: 'User edit',
+            title: 'Editar Usuario',
             user: user,
             session: req.session,
             message: common.clear_session_value(req.session, 'message'),
@@ -765,7 +765,7 @@ router.get('/users/new', common.restrict, function (req, res){
     }
 
     res.render('user_new', {
-        title: 'User - New',
+        title: 'Usuario - Nuevo',
         session: req.session,
         message: common.clear_session_value(req.session, 'message'),
         message_type: common.clear_session_value(req.session, 'message_type'),
@@ -779,7 +779,7 @@ router.get('/articles', common.restrict, function (req, res){
     var db = req.app.db;
     common.dbQuery(db.kb, {kb_versioned_doc: {$ne: true}}, {kb_published_date: -1}, 10, function (err, articles){
         res.render('articles', {
-            title: 'Articles',
+            title: 'Artículos',
             articles: articles,
             session: req.session,
             message: common.clear_session_value(req.session, 'message'),
@@ -794,7 +794,7 @@ router.get('/articles/all', common.restrict, function (req, res){
     var db = req.app.db;
     common.dbQuery(db.kb, {kb_versioned_doc: {$ne: true}}, {kb_published_date: -1}, null, function (err, articles){
         res.render('articles', {
-            title: 'Articles',
+            title: 'Artículos',
             articles: articles,
             session: req.session,
             message: common.clear_session_value(req.session, 'message'),
@@ -818,7 +818,7 @@ router.get('/articles/:tag', function (req, res){
     // we search on the lunr indexes
     common.dbQuery(db.kb, {_id: {$in: lunr_id_array}}, {kb_published_date: -1}, null, function (err, results){
         res.render('articles', {
-            title: 'Articles',
+            title: 'Artículos',
             results: results,
             session: req.session,
             message: common.clear_session_value(req.session, 'message'),
@@ -1312,7 +1312,7 @@ router.get('/files', common.restrict, function (req, res){
 // insert form
 router.get('/insert', common.restrict, function (req, res){
     res.render('insert', {
-        title: 'Insert new',
+        title: 'Crear Nuevo',
         session: req.session,
         kb_title: common.clear_session_value(req.session, 'kb_title'),
         kb_body: common.clear_session_value(req.session, 'kb_body'),
@@ -1367,7 +1367,7 @@ router.get(['/search/:tag', '/topic/:tag'], common.restrict, function (req, res)
     common.dbQuery(db.kb, {_id: {$in: lunr_id_array}, kb_published: 'true', kb_versioned_doc: {$ne: true}}, null, null, function (err, results){
         common.dbQuery(db.kb, {kb_published: 'true', kb_featured: 'true'}, sortBy, featuredCount, function (err, featured_results){
             res.render('index', {
-                title: 'Search results: ' + search_term,
+                title: 'Resultados de búsqueda: ' + search_term,
                 search_results: results,
                 user_page: true,
                 session: req.session,
@@ -1414,7 +1414,7 @@ router.post('/search', common.restrict, function (req, res){
     common.dbQuery(db.kb, {_id: {$in: lunr_id_array}, kb_published: 'true', kb_versioned_doc: {$ne: true}}, null, null, function (err, results){
         common.dbQuery(db.kb, {kb_published: 'true', kb_featured: 'true'}, sortBy, featuredCount, function (err, featured_results){
             res.render('index', {
-                title: 'Search results: ' + search_term,
+                title: 'Resultados de búsqueda: ' + search_term,
                 search_results: results,
                 user_page: true,
                 session: req.session,
@@ -1433,7 +1433,7 @@ router.post('/search', common.restrict, function (req, res){
 // import form
 router.get('/import', common.restrict, function (req, res){
     res.render('import', {
-        title: 'Import',
+        title: 'Importar',
         session: req.session,
         helpers: req.handlebars,
         message: common.clear_session_value(req.session, 'message'),
