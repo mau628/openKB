@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+
+  api:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: openkb
+    ports:
+      - "4444:4444"
