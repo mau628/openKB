@@ -151,5 +151,9 @@
 	"Private": "Privado",
 	"SEO title": "Título SEO",
 	"SEO description": "Descripción SEO",
-	"Successfully saved": "Guardado con éxito"
+	"Successfully saved": "Guardado con éxito",
+	"Keywords": "Palabras clave",
+	"Suggestion successfully processed": "Sugerencia procesada con éxito",
+	"Results for": "Resultados para",
+	"No results found": "No se encontraron resultados"
 }
